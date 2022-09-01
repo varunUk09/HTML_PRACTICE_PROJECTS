@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Form Using Flex Box </title>
+	<!-- Custom Css -->
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class="msg-box" id="msg-box">
+			Sample Error Message
+	</div>
+	<form method="post" id="login-form" name = "login-form" novalidate autocomplete="off">
+		<div class="form-box field-box" id="formBox">
+			<label for="username">Username</label>
+			<input type="text" name="field" id="username" placeholder="Username" required>
+		</div>
+		<div class="form-box field-box" id="formBox">
+			<label for="email">Email</label>
+			<input type="email" name="field" id="email" placeholder="Email" required>
+		</div>
+		<div class="form-box field-box" id="formBox">
+			<label for="password">Password</label>
+			<input type="password" name="field" id="password" placeholder="Password" required>
+		</div>
+		<div class="form-box btn-box" id="formBox">
+			<input type="submit" name="btn" value="Submit" id="submit">
+			<input type="reset" name="btn" value="Reset" id="reset">
+		</div>
+	</form>
+	<script type="text/javascript" src="script.js"></script>
+</body>
+</html>

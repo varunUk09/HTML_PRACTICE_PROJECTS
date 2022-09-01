@@ -1,0 +1,40 @@
+*{
+	margin: 0;padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+	font-family:monospace;
+}
+
+html{
+	font-size: 62.5%;
+}
+
+:root{
+	--animation-duration: .8s;
+}
+
+.container{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: purple;
+	height: 100vh;
+}
+
+.container h1{
+	font-size: 5rem;
+	color: white;
+	animation-name: blinking_text;
+	animation-duration:var(--animation-duration);
+	animation-iteration-count: infinite;
+}
+
+@keyframes blinking_text{
+	0%{opacity: 1;}
+
+	50%{opacity: 0;}
+
+	100%{opacity: 1;}
+}
