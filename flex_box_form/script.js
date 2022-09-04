@@ -2,8 +2,9 @@ const form = document.getElementById("login-form");
 const msgBox = document.getElementById("msg-box");
 let homePage = window.location.href;
 const emailValidtionRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-const errCss = "display:flex;border-color:#8b0000;color:#8b0000;background-color:#ff9494;"
-const successCss = "display:flex;border-color:green;color:green;background-color:lightgreen;"
+const errCss = "display:flex;border-color:white;color:white;background-color:red;"
+const wrnCss = "display:flex;border-color:white;color:black;background-color:yellow;"
+const successCss = "display:flex;border-color:white;color:white;background-color:green;"
 
 
 form.addEventListener('submit',function(e){
@@ -12,31 +13,29 @@ form.addEventListener('submit',function(e){
 	const email = document.getElementById("email");
 	const pass = document.getElementById("password");
 
-	
+	function validate(e){
+		if(e.field){
+			e.field.focus();			
+		}
+		msgBox.style.cssText = e.msgBoxCss;
+		msgBox.innerHTML = e.msg;
+	}
 
-	//  validation
+//  validation
 	if(uName.value == ""){
-		uName.focus();
-		msgBox.style.cssText = errCss;
-		msgBox.innerHTML = "Enter Your Username";   
+		validate({field:uName,msg:'Enter Your Username',msgBoxCss:errCss})
 	} else if(email.value == ""){
-		email.focus();
-		msgBox.style.cssText =errCss;
-		msgBox.innerHTML = "Enter Your Email";
+		validate({field:email,msg:'Enter Your Email',msgBoxCss:errCss})
 	} else if(pass.value == ""){
-		pass.focus();
-		msgBox.style.cssText = errCss;
-		msgBox.innerHTML = "Enter Your Password";
+		validate({field:pass,msg:'Enter Your Password',msgBoxCss:errCss})
 	} else if (!email.value.match(emailValidtionRegex)){
-		msgBox.style.cssText = errCss;
-		msgBox.innerHTML = "Email Format Incorrect";
-	} else{ // if validated
-		msgBox.style.cssText = successCss;
-		msgBox.innerHTML = "Logged In Redirecting in 3s...";
-		// form.reset.click();
+		validate({field:email,msg:'Enter Format Incorrect',msgBoxCss:wrnCss})
+	}
+	else{ // if validated
+		validate({msg:'Logged In Redirecting in 3s...',msgBoxCss:successCss})
 		form.style.display = "none";
 		setTimeout(() =>{
 			window.location.href = homePage;
 		},3000);
 	}
-})
+});
