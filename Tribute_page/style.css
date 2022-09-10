@@ -78,7 +78,7 @@ main .container .img{
 	width:95%;
 	max-width: 40rem;
 	min-width: 30rem;
-	min-height:45rem;
+	min-height:40rem;
 	max-height: auto;
 	background-image: url("./images/bg_image/apjKalam.jpg");
 	background-repeat: no-repeat;
