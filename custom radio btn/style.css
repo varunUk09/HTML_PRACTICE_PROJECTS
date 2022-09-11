@@ -1,0 +1,105 @@
+*{
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+}
+
+
+html{
+	font-size: 62.5%;
+}
+
+.container{
+	width: 115.2rem;
+	height: 100vh;
+	margin:0 auto;
+	padding:0 0.8rem;
+}
+
+.content{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	gap:2rem;
+	justify-content: center;
+	align-items: center;
+	border:.1rem solid lightgreen;
+	transition: background-color 0.15s linear;
+}
+
+.content_dark{
+	background-color: #111111;
+}
+
+.content label{
+	display:flex;
+}
+
+.content label input[type="radio"]{
+	display: none;
+}
+
+.content label .custom_radio{
+	border:.1rem solid lightgreen;
+	width: 10rem;
+	height: 10rem;
+	border-radius: 50%;
+	padding:1.5rem;
+}
+
+.content label .custom_radio::after{
+	content: '';
+	width: 100%;
+	height: 100%;
+	display: block;
+	background-color:green;
+	border-radius: 50%;
+	transform:scale(0);
+	transition: transform 0.15s;
+}
+
+
+.content label[for="second"] .custom_radio{
+	border:.1rem solid red;
+}
+
+.content label[for="second"] .custom_radio::after{
+	background-color: red;
+}
+
+.content label input[type="radio"]:checked + .custom_radio::after{
+	transform: scale(1);
+}
+
+
+/*====== media queries ======*/
+@media(max-width: 1199px){
+	.container{
+		width: 96rem;
+	}
+}
+
+@media(max-width: 991px){
+	.container{
+		width: 72rem;
+	}
+}
+
+@media(max-width: 767px){
+	.container{
+		width: 54rem;
+	}
+}
+
+@media(max-width: 575px){
+	.container{
+		width: 34rem;
+	}
+}
+
+@media(max-width: 371px){
+	.container{
+		width:100%;
+	}
+}
