@@ -1,6 +1,6 @@
 const navMenuBtn = document.querySelector(".nav_open");
 const nav = document.querySelector(".navigation_top");
-const isMenuOpen = false;
+let isMenuOpen = false;
 const navCloseBtn = document.querySelector(".close_nav");
 
 navMenuBtn.addEventListener('click',()=>{
