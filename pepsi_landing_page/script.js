@@ -15,4 +15,4 @@ function hideNav(){
 }
 navCloseBtn.addEventListener('click',hideNav);
 
-window.addEventListener('scroll',hideNav);
+// window.addEventListener('scroll',hideNav);
