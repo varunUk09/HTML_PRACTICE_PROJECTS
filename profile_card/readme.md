@@ -1,3 +1,3 @@
 ### Preview Link
 
-[LINK](https://varunuk09.github.io/profile_card/)
+[LINK](https://varunuk09.github.io/HTML_PRACTICE_PROJECTS/profile_card/)
