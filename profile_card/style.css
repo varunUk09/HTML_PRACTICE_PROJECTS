@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+*{
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+	font-family: 'Poppins',sans-serif;
+	list-style: none;
+}
+
+html{
+	font-size: 62.5%;
+}
+
+.container{
+	width: 100vw;
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #00162b;
+}
+
+.container .card{
+	display: flex;
+	align-items: center;
+	background-color: #fff;
+	padding:5rem;
+	border-radius: 1rem;
+	width: 100%;
+	max-width: 900px;
+	margin:1rem;
+	position: relative;
+}
+
+.container .card > img[alt="user_image"]{
+	width: 15rem;
+	height: 15rem;
+	border-radius: 50%;
+	border: 1.6rem solid #f1eff8;
+	margin-right: 3rem;
+
+}
+
+.container .card > img[alt="user_image"]:hover{
+	transform: scale(1.03);
+	transition: transform 0.5s;
+}
+
+.container .card .user_info{
+	flex:1;
+}
+
+.container .card .user_info > h1{
+	font-size: 3rem;
+	font-weight: 700;
+	margin-bottom: 1.6rem;
+}
+
+.container .card .user_info > p{
+	font-size: 1.6rem;
+	font-weight: 400;
+	margin-bottom: 2.5rem;
+}
+
+.container .card .user_info ul,
+.container .card .user_info ul li a{
+	display:inline-flex;
+}
+
+.container .card .user_info ul.user_links li{
+	display:inline-block;
+	margin-right: 2rem;
+}
+
+.container .card .user_info ul li a{
+	align-items: center;
+	text-decoration:none;
+	color:#835eec;
+	font-weight: 700;
+	font-size: 1.5rem;
+}
+
+.container .card .user_info ul li a img{
+	width: 2rem;
+	height: 2rem;
+	object-fit: contain;
+	margin-right: 1rem;
+}
+
+
+.container .card .user_info ul.user_links li a:hover{
+	filter: brightness(0%);
+	transition: all 0.5s;
+}
+
+.container .card .user_info ul.user_data{
+	margin-top: 2rem;
+	display: flex !important;
+	gap:1.5rem;
+}
+
+.container .card .user_info ul.user_data li{
+	flex:1;
+}
+
+
+.container .card .user_info ul.user_data li a {
+	padding:1rem;
+	border:.2rem solid #835eec;
+	border-radius: .5rem;
+	width: 100%;
+	justify-content: center;
+}
+
+.container .card .user_info ul.user_data li a.download_cv_cta{
+	background-color: #835eec;
+	color:white;
+}
+
+.container .card .user_info ul.user_data li a:hover{
+	background-color: #111111;
+	color: white;
+	border-color:black;
+	transition: all 0.5s;
+}
+
+/*share icon*/
+.container .card .share_icon img{
+	width: 4.6rem;
+	height: 4.6rem;
+	border: 1rem solid #f1eff8;
+	border-radius: 50%;
+	background-color: #f1eff8;
+	position: absolute;
+	top:1rem;
+	right:1rem;
+}
+
+
+@media(max-width: 797px){
+	.container .card {
+    	padding: 3rem;
+	}
+	
+	.container .card .user_info ul.user_links {
+		display: flex;
+    	flex-direction: column;
+    	gap: 1.2rem;
+	}
+	.container .card .user_info ul.user_links li{
+		margin-right: 0!important;
+	}
+}
+
+
+@media(max-width: 614px){
+	.container .card > img[alt="user_image"] {
+    	 margin-right:0; 
+	}
+	.container .card {
+    	padding: 2rem;
+    	flex-direction: column;
+    	gap:2rem;
+	}
+
+	.container .card .user_info {
+    	width: 100%;
+    	text-align: center;
+	}
+	
+
+	.container .card .share_icon img {
+		top:1rem;
+    	left: 1rem;
+	}
+
+}
+
+
+@media(max-width: 389px){
+	.container .card .user_info ul.user_data {
+    	flex-direction: column;
+	}
+}
+
+
