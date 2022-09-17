@@ -114,6 +114,7 @@ main .container .description p::after{
 	content: "\f10e";
  	font: var(--fa-font-solid);
  	font-size: 5rem;
+ 	display: inline-block;
 }
 
 /* main end */
