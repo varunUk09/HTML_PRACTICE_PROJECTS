@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+*, *::before, *::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+
+html {
+	font-size: 62.5% !important;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+}
+
+.avatar {
+	background-image: url("./images/pepsi_logo.png");
+	width: 15rem;
+	height: 15rem;
+	background-size: cover;
+	background-position: center;
+	position: relative;
+}
+
+.avatar::before, .avatar::after {
+	--scale: 0;
+	--arrow-size: 1.4rem;
+	--translate-x: 0;
+	--translate-y: 0;
+	--tooltip-color: black;
+	top: 1.1rem;
+	position: absolute;
+	transform: translateX(var(--translate-x)) translateY(var(--translate-y)) scale(var(--scale));
+	transition: transform 0.5s;
+}
+
+.avatar::before {
+	--translate-y: calc(-100% - var(--arrow-size));
+	--translate-x: -50%;
+	--tooltip-data: attr(data-tooltip);
+	content: var(--tooltip-data);
+	background: var(--tooltip-color);
+	color: white;
+	padding: 1rem;
+	font-size: 1.6rem;
+	display: block;
+	text-align: center;
+	transform-origin: bottom;
+	left: 50%;
+	max-width: 100%;
+	width: max-content;
+}
+
+.avatar::after {
+	content: '';
+	border: var(--arrow-size) solid transparent;
+	border-top-color: var(--tooltip-color);
+	left: 50%;
+	--translate-x: -50%;
+	--translate-y: calc(-1*var(--arrow-size));
+	transform-origin: top;
+}
+
+.avatar:hover::before, .avatar:hover::after {
+	--scale: 1;
+}
