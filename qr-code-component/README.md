@@ -19,8 +19,13 @@ This is a solution to the [QR code component challenge on Frontend Mentor](https
 
 ### Screenshot
 
+<<<<<<< HEAD
 ![desktop-model](./screenshot/desktop.png)
 ![mobile-model](./screenshot/mobile.png)
+=======
+![desktop-model](screenshot/desktop.jpg)
+![mobile-model](screenshot/mobile.jpg)
+>>>>>>> 3f2bed3545fd57435e42eddae97488798b30966f
 
 ### Links
 
