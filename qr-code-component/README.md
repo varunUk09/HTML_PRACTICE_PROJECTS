@@ -9,11 +9,9 @@ This is a solution to the [QR code component challenge on Frontend Mentor](https
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
+  
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
+
 
 
 
@@ -21,13 +19,13 @@ This is a solution to the [QR code component challenge on Frontend Mentor](https
 
 ### Screenshot
 
-![desktop-model](./screenshot/desktop.jpg)
-![mobile-model](./screenshot/mobile.jpg)
+![desktop-model](./screenshot/desktop.png)
+![mobile-model](./screenshot/mobile.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [solution](https://github.com/varunUk09/HTML_PRACTICE_PROJECTS/tree/master/qr-code-component)
+- Live Site URL: [live](https://varunuk09.github.io/HTML_PRACTICE_PROJECTS/qr-code-component/)
 
 ## My process
 
