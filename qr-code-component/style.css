@@ -61,3 +61,12 @@ body {
 	margin-bottom: 2.4rem;
 	letter-spacing: .03rem;
 }
+
+.attribution {
+	font-size: 1.1rem;
+	text-align: center;
+}
+
+.attribution a {
+	color: hsl(228, 45%, 44%);
+}
