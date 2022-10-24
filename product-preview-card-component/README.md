@@ -44,6 +44,6 @@ Users should be able to:
 - Desktop-first workflow
 
 ## Author
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
+- Varun - [@varunUk09](https://www.frontendmentor.io/profile/@varunUk09)
 
 
