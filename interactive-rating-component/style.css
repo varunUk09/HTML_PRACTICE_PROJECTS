@@ -105,7 +105,7 @@ input.submit-rating {
     padding: 12px 12px;
     text-transform: uppercase;
     color: var(--white);
-    margin-top: 26px;
+    margin-top: 34px;
     border-radius: 30px;
     cursor: pointer;
 }
