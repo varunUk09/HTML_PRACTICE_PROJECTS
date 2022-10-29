@@ -15,12 +15,12 @@
   <main class="product-card">
     <div class="product-card__container">
       <!-- product image div -->
-      <div class="col col-1">
-        <!-- image for desktop -->
-        <img class="product-image desktop-img" src="images/product-image.jpg" alt="product-image">
-        <!-- image for mobile -->
-        <img class="product-image mobile-img" src="images/mobile-img.jpg" alt="product-image">
-      </div>
+      <picture class="col col-1">
+        <!-- image for mobile view -->
+        <source media = "(max-width:639px)" srcset="images/mobile-img.jpg">
+        <!-- image for desktop view -->
+        <img class="product-image" src="images/product-image.jpg" alt="product-image">
+      </picture>
       <div class="col col-2">
         <!-- product name -->
         <div class="product-name">perfume</div>
