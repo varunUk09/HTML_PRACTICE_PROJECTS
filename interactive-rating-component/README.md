@@ -28,10 +28,10 @@ Users should be able to:
 
 ### Screenshot
 
-![](./desktop.png)
-![](./mobile.png)
-![](./desktop-thank-you-state.png)
-![](./mobile-thanku-state.png)
+![](./screenshot/desktop.png)
+![](./screenshot/mobile.png)
+![](./screenshot/desktop-thank-you-state.png)
+![](./screenshot/mobile-thanku-state.png)
 
 ### Links
 
