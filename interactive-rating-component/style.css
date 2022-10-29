@@ -73,26 +73,26 @@ form label.rating::before {
     content: attr(data-rating);
     color: var(--light-grey);
     background: var(--dark-blue);
-    width:100%;
-    height:100%;
+    width: 100%;
+    height: 100%;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-form label.rating:hover::before{
-	color: var(--white);
-	background: var(--orange);
+form label.rating:hover::before {
+    color: var(--white);
+    background: var(--orange);
 }
 
-form label.rating ~ label.rating {
+form label.rating~label.rating {
     margin-left: 16px;
 }
 
-form input[name="rating-radio"]:checked + label.rating::before{
-	background: var(--medium-grey);
-	color: var(--white);
+form input[name="rating-radio"]:checked+label.rating::before {
+    background: var(--medium-grey);
+    color: var(--white);
 }
 
 input.submit-rating {
@@ -116,13 +116,13 @@ input.submit-rating:hover {
 }
 
 /*thanku state box*/
-.thanku-state{
-	text-align: center;
-	padding-block: 46px;
-	display: none;
+.thanku-state {
+    text-align: center;
+    padding-block: 46px;
+    display: none;
 }
 
-.thanku-state > svg {
+.thanku-state>svg {
     margin-bottom: 26px;
 }
 
@@ -137,17 +137,27 @@ input.submit-rating:hover {
     margin-bottom: 32px;
 }
 
-.thanku-state p.feedback-para{
-	margin-bottom: 0;
+.thanku-state p.feedback-para {
+    margin-bottom: 0;
 }
 
-@media(max-width: 447px){
-	.container.feedback-state{
-		padding-inline: 26px;
-	}
+@media(max-width: 447px) {
+    .container.feedback-state {
+        padding-inline: 26px;
+    }
 
-	form label.rating{
-		width: 40px;
-		height: 40px;
-	}
+    form label.rating {
+        width: 40px;
+        height: 40px;
+    }
+
+    form .ratings {
+        display: flex;
+        justify-content: center;
+        gap: 16px;
+    }
+
+    form label.rating~label.rating {
+         margin-left:0; 
+    }
 }
