@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Overpass', sans-serif;
+}
+
+:root {
+    --orange: hsl(25, 97%, 53%);
+    --white: hsl(0, 0%, 100%);
+    --light-grey: hsl(217, 12%, 63%);
+    --medium-grey: hsl(216, 12%, 54%);
+    --dark-blue: hsl(213, 19%, 18%);
+    --very-dark-blue: hsl(216, 12%, 8%);
+}
+
+main {
+    min-height: 100vh;
+    background: var(--very-dark-blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background: rgba(37, 45, 55, 0.4);
+    width: 100%;
+    max-width: 412px;
+    text-align: justify;
+    color: var(--white);
+    padding: 30px 34px;
+    margin-inline: 20px;
+    border-radius: 30px;
+}
+
+span.star-icon-container {
+    display: inline-flex;
+    align-items: center;
+    padding: 16px;
+    border-radius: 50%;
+    background: var(--dark-blue);
+    margin-bottom: 34px;
+}
+
+h1.heading {
+    font-weight: 400;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+p.feedback-para {
+    color: var(--light-grey);
+    line-height: 1.6;
+    margin-bottom: 26px;
+    font-size: 15px;
+}
+
+form .ratings {
+    text-align: center;
+}
+
+form label.rating {
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 52px;
+    height: 52px;
+}
+
+form label.rating::before {
+    content: attr(data-rating);
+    color: var(--light-grey);
+    background: var(--dark-blue);
+    width:100%;
+    height:100%;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form label.rating:hover::before{
+	color: var(--white);
+	background: var(--orange);
+}
+
+form label.rating ~ label.rating {
+    margin-left: 16px;
+}
+
+form input[name="rating-radio"]:checked + label.rating::before{
+	background: var(--medium-grey);
+	color: var(--white);
+}
+
+input.submit-rating {
+    width: 100%;
+    background: var(--orange);
+    border: none;
+    outline: none;
+    font-size: 16px;
+    letter-spacing: 1px;
+    padding: 12px 12px;
+    text-transform: uppercase;
+    color: var(--white);
+    margin-top: 26px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+input.submit-rating:hover {
+    background: var(--white);
+    color: var(--orange);
+}
+
+/*thanku state box*/
+.thanku-state{
+	text-align: center;
+	padding-block: 46px;
+	display: none;
+}
+
+.thanku-state > svg {
+    margin-bottom: 26px;
+}
+
+.thanku-state p.feedback-msg {
+    color: var(--orange);
+    background: var(--dark-blue);
+    width: fit-content;
+    margin-inline: auto;
+    padding: 8px 16px 6px 16px;
+    font-size: 15px;
+    border-radius: 20px;
+    margin-bottom: 32px;
+}
+
+.thanku-state p.feedback-para{
+	margin-bottom: 0;
+}
+
+@media(max-width: 447px){
+	.container.feedback-state{
+		padding-inline: 26px;
+	}
+
+	form label.rating{
+		width: 40px;
+		height: 40px;
+	}
+}
