@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Karla', sans-serif;
+}
+
+:root {
+    --light-gray: hsl(204, 43%, 93%);
+    --white: white;
+    --cyan: hsl(179, 62%, 43%);
+    --bright-yellow: hsl(71, 73%, 54%);
+    --grayish-blue: hsl(218, 22%, 67%);
+}
+
+html {
+    font-size: 62.5%;
+    /*it will set 10px = 1rem*/
+}
+
+main {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    background: var(--light-gray);
+}
+
+.card-container {
+    margin-inline: 2.4rem;
+}
+
+.card-container > .card{
+        padding: 4.2rem;
+    }
+
+/*common properties*/
+
+.card h1.heading {
+    margin-bottom: 2rem;
+    font-size: 1.7rem;
+}
+
+/*card - 1*/
+.card-container .card-1 {
+    background: var(--white);
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.card-1 h1.heading {
+    color: var(--cyan);
+    font-size: 2.3rem;
+    margin-bottom: 2.4rem;
+}
+
+.card-1 p.garuntee {
+    color: var(--bright-yellow);
+    font-size: 1.7rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.card-1 p.specs {
+    font-size: 1.54rem;
+    color: var(--grayish-blue);
+    line-height: 1.7;
+}
+
+/*card - 2*/
+.card-container .card-2 {
+    background: var(--cyan);
+    color: var(--white);
+}
+
+.card-2 .price-container {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    margin-bottom: 1.2rem;
+}
+
+.card-2 .price-container span.price {
+    font-size: 3.2rem;
+    font-weight: 700;
+}
+
+.card-2 .price-container span.period {
+    color: var(--light-gray);
+    font-size: 1.55rem;
+}
+
+.card-2 p.desc {
+    font-size: 1.55rem;
+    margin-bottom: 2.4rem;
+}
+
+.card-2 .signup-cta {
+    color: var(--white);
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    font-size: 1.6rem;
+    background: var(--bright-yellow);
+    padding: 1.3rem;
+    border-radius: 0.5rem;
+}
+
+/* card - 3 */
+.card-container .card-3 {
+    background: rgba(42, 178, 175, 0.7);
+    color: var(--light-gray);
+}
+
+.card-container .card-3 ul {
+    list-style: none;
+    font-size: 1.35rem;
+    line-height: 1.5;
+}
+
+/* destop view */
+@media screen and (min-width: 500px) {
+    .card-container {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 64rem;
+    }
+    
+    .card-container .card-1 {
+        flex-basis: 100%;
+    }
+
+    .card-container .card:nth-child(n + 2) {
+        flex-basis: 50%;
+    }
+}
