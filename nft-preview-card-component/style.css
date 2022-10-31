@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Outfit', sans-serif;
+}
+
+:root{
+	--very-dark-blue-main-BG: hsl(217, 54%, 11%);
+	--very-dark-blue-card-BG: hsl(216, 50%, 16%);
+	--very-dark-blue-line: hsl(215, 32%, 27%);
+	--white: hsl(0, 0%, 100%);
+	--soft-blue: hsl(215, 51%, 70%);
+	--cyan: hsl(178, 100%, 50%);
+}
+
+html{
+	font-size: 62.5%;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover{
+	color: var(--cyan);
+}
+
+main{
+	background: var(--very-dark-blue-main-BG);
+	color: var(--soft-blue);
+	display: grid;
+	place-items: center;
+	min-height: 100vh;
+}
+
+.nft-card-wrapper{
+	--border-radius: 1.6rem;
+	background: var(--very-dark-blue-card-BG);
+	padding: 2.4rem;
+	margin: 2.2rem;
+	border-radius:var(--border-radius);
+	max-width: 353px;
+}
+
+.nft-image{
+	position: relative;
+}
+
+.nft-image img{
+	--border-radius:0.6rem;
+	width: 100%;
+	border-radius: var(--border-radius);
+	display: block;
+	object-fit: cover;
+	object-position: center;
+	margin-bottom: 2.42rem;
+}
+
+.nft-image div.nft-view{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height:0;
+	display: grid;
+	place-items: center;
+	transition:height 0.2s;
+	overflow: hidden;
+}
+
+.nft-image:hover div.nft-view{
+	height:100%;
+	background:rgba(0,255,247,0.6);
+}
+
+.nft-title{
+	color: var(--white);
+	font-size: 2.2rem;
+	margin-bottom: 1.6rem;
+}
+
+.nft-desc{
+	font-size: 1.8rem;
+	font-weight: 300;
+	line-height: 1.4;
+	margin-bottom: 2.4rem;
+}
+
+.nft-price-container{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.nft-price-container > span {
+    display: flex;
+    align-items: center;
+    font-size: 1.6rem;
+    gap: 0.9rem;
+}
+
+.nft-price-container > span:nth-child(2){
+	font-weight: 300;
+}
+
+.nft-price-container > span:nth-child(1){
+	color: var(--cyan);
+}
+
+.nft-attribution{
+	display: flex;
+	align-items: center;
+	gap: 1.77rem;
+	border-top: .1rem solid var(--very-dark-blue-line);
+	margin-top: 2.4rem;
+	padding-top: 1.6rem;
+	color: var(--white);
+	font-size: 1.6rem;
+	font-weight: 300;
+}
+
+.nft-attribution > img.avatar{
+	width: 33px;
+	border: .1rem solid var(--white);
+	border-radius: 50%;
+}
+
+.nft-attribution .credit > span {
+ 	color: var(--soft-blue);
+}
