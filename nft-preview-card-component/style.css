@@ -69,11 +69,12 @@ main{
 	place-items: center;
 	transition:height 0.2s;
 	overflow: hidden;
+	background:rgba(0,255,247,0.6);
 }
 
 .nft-image:hover div.nft-view{
 	height:100%;
-	background:rgba(0,255,247,0.6);
+	
 }
 
 .nft-title{
