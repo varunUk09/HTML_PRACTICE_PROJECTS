@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,700;1,100&display=swap');
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Roboto', sans-serif;
+}
+
+html{
+	font-size: 62.5%;
+}
+
+:root{
+	--primary-clr: #4285f4;
+	--secondary-clr: #fff;
+}
+
+main{
+	display: grid;
+	place-items: center;
+	background-color:var(--primary-clr);
+	min-height: 100vh;
+}
+
+.container{
+	width: 100%;
+	max-width: 54rem;
+	box-shadow: 0 0 1rem rgba(0,0,0,0.7);
+	text-align: center;
+	padding: 2rem;
+	margin: 1rem;
+	border-radius: 0.5rem;
+	background-color:var(--secondary-clr);
+}
+
+.container h1{
+	font-weight: 700;
+	font-size: 3.2rem;
+	text-transform: uppercase;
+	margin-bottom: 1.6rem;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	gap: 1.2rem;
+}
+
+form input[type="url"]{
+	outline: none;
+	border: .2rem solid rgba(0,0,0,0.3);
+	padding: .8rem;
+	font-size: 1.6rem;
+	color:rgba(0, 0, 0, 0.65);
+}
+
+form input[type="url"]::placeholder{
+	text-align: center;
+	letter-spacing: .1rem;
+}
+
+form input[type="submit"]{
+	border: none;
+	outline: none;
+	color:var(--secondary-clr);
+	text-transform: uppercase;
+	padding: 1.2rem;
+	border-radius: .5rem;
+	cursor: pointer;
+	background-color: #7da8f1;
+	pointer-events: none;
+	font-size: 1.6rem;
+}
+
+form input[type="url"]:valid + input[type='submit']{
+	background-color:var(--primary-clr);
+	pointer-events: auto;
+}
