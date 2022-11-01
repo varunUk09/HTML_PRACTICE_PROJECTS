@@ -20,6 +20,7 @@ main{
 	place-items: center;
 	background-color:var(--primary-clr);
 	min-height: 100vh;
+	padding-inline: 1rem;
 }
 
 .container{
@@ -28,7 +29,7 @@ main{
 	box-shadow: 0 0 1rem rgba(0,0,0,0.7);
 	text-align: center;
 	padding: 2rem;
-	margin: 1rem;
+
 	border-radius: 0.5rem;
 	background-color:var(--secondary-clr);
 }
