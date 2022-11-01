@@ -17,6 +17,7 @@ function fetchFile(url) {
         document.body.insertAdjacentElement("beforeend", aTag);
         aTag.click();
         aTag.remove();
+        URL.revokeObjectURL(tempUrl);
         DOWNLOAD_BTN.value = "SUBMIT";
 
     }).catch(e => {
