@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <title>Order summary card</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script type="text/javascript" src="script.js" defer></script>
+</head>
+
+<body>
+    <main>
+        <!-- background wave pattern -->
+        <picture id="background-pattern">
+            <!-- image for mobile view -->
+            <source media="(max-width:639px)" srcset="./images/pattern-background-mobile.svg">
+            <!-- image for desktop view -->
+            <img class="background-pattern-img" src="./images/pattern-background-desktop.svg" alt="background-wave-image" width="100%">
+        </picture>
+        <!-- order summary component -->
+        <div class="wrapper">
+            <div class="container">
+                <ul class="content">
+                    <!-- illustration image -->
+                    <li class="item-1">
+                        <img src="./images/illustration-hero.svg" alt="component-illustration" width="100%">
+                    </li>
+                    <!-- order details -->
+                    <li class="item-2">
+                        <h1 class="title">Order Summary</h1>
+                        <p class="info">You can now listen to millions of songs,<br>audiobooks, and podcasts on any device<br>anywhere you like!</p>
+                        <!-- billing info block-->
+                        <ul class="billing-info">
+                            <li class="item-1">
+                                <!-- music icon -->
+                                <img src="./images/icon-music.svg">
+                                <!-- billing type -->
+                                <div class="billing">
+                                    <strong class="plan-type">Annual Plan</strong>
+                                    <span class="pricing">&dollar;59.99/year</span>
+                                </div>
+                            </li>
+                            <li class="item-2">
+                                <!-- change plan type cta -->
+                                <a href="#" class="plan-change-cta">Change</a>
+                            </li>
+                        </ul>
+                        <!-- proceed to payment cta-->
+                        <a href="#" class="payment-cta">Proceed to Payment</a>
+                        <!-- cancle order -->
+                        <a href="#" class="cancle-order">Cancel Order</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

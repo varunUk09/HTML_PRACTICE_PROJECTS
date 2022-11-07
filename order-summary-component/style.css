@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Red Hat Display', sans-serif;
+    transition: all 0.5s;
+}
+
+:root {
+    --pale-blue: hsl(225, 100%, 94%);
+    --bright-blue: hsl(245, 75%, 52%);
+    --very-pale-blue: hsl(225, 100%, 98%);
+    --desaturated-blue: hsl(224, 23%, 55%);
+    --dark-blue: hsl(223, 47%, 23%);
+    --white: #fff;
+}
+
+a {
+    text-decoration: none;
+    display: block;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+li {
+    list-style-type: none;
+}
+
+main {
+    min-height: 100vh;
+    background-color: var(--pale-blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#background-pattern {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 452px;
+    z-index: 999;
+}
+
+.content>.item-1>img {
+    border-radius: 24px 24px 0 0;
+    display: block;
+    object-fit: cover;
+}
+
+.content>.item-2 {
+    background-color: var(--white);
+    border-radius: 0 0 24px 24px;
+    text-align: center;
+    padding: 46px 50px;
+    color: var(--desaturated-blue);
+}
+
+.content>.item-2>.title {
+    color: var(--dark-blue);
+    font-size: 28px;
+    font-weight: 900;
+    margin-bottom: 18px;
+}
+
+ul.billing-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--very-pale-blue);
+    padding: 20px;
+    border-radius: 16px;
+    margin-bottom: 36px;
+}
+
+.billing-info .item-1 {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.billing-info .billing {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.billing-info .billing > .plan-type {
+    color: var(--dark-blue);
+}
+
+.billing-info a.plan-change-cta {
+    font-size: 15px;
+    text-decoration: underline;
+    color: var(--bright-blue);
+}
+
+.billing-info a.plan-change-cta:hover {
+    text-decoration: none;
+}
+
+.content>.item-2>a.payment-cta {
+    background: var(--bright-blue);
+    color: var(--white);
+    padding: 14px 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgb(0 0 0 / 16%);
+    margin-bottom: 36px;
+}
+
+.content>.item-2>a.payment-cta:hover {
+    background-image: linear-gradient(rgb(255 255 255 /30%) 0 0);
+}
+
+.content>.item-2>a.cancle-order {
+    color: var(--desaturated-blue);
+}
+
+.content>.item-2>a.cancle-order:hover {
+    color: var(--dark-blue);
+}
+
+.content>.item-2>p.info {
+    line-height: 1.6;
+    word-spacing: 1.1px;
+    margin-bottom: 24px;
+}
+
+@media(max-width: 767px) {
+    .wrapper {
+        margin-inline: 15px;
+    }
+
+    .content>.item-2 {
+        padding: 32px 26px;
+    }
+
+    .content>.item-2>.title {
+        font-size: 24px;
+    }
+
+    .content>.item-2>p.info br {
+        display: none;
+    }
+}
