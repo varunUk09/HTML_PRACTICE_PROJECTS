@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    transition: all 0.5s;
+}
+
+/* resting */
+li {
+    list-style-type: none;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+main {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: purple;
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 50rem;
+}
+
+.accordian-items__item :is(label,.accordian-items__item-content){
+	background: white;
+}
+
+.accordian-items__item label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.8rem;
+    font-weight: 500;
+    padding: 10px;
+    cursor: pointer;
+}
+
+p.accordian-items__item-content {
+    margin-top: 0.5rem;
+    padding: 10px;
+    font-size: 1.3rem;
+    letter-spacing: .1rem;
+    height: 0;
+    display: none;
+}
+
+span.accordian-icon img {
+    width: 2rem;
+}
+
+.accordian-items__item + .accordian-items__item{
+	margin-top: 1.6rem;
+}
+
+/* accordian logic */
+input[name="accordian-radio"]:checked + label .accordian-icon {
+    rotate: 45deg;
+    filter: invert(19%) sepia(62%) saturate(7389%) hue-rotate(356deg) brightness(100%) contrast(123%);
+}
+
+input[name="accordian-radio"]:checked ~ p.accordian-items__item-content{
+	display: block;
+	height: auto;
+}
+
+@media(max-width: 767px) {
+    .wrapper {
+        margin: 2rem;
+    }
+}
