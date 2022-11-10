@@ -24,24 +24,21 @@ li {
 
 main {
     min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
     background-color: var(--primary-clr);
     font-size: 2rem;
     letter-spacing: 0.05rem;
 }
 
 
-.wrapper {
-    width: 100%;
-    max-width: 94rem;
-    padding: 2rem;
-}
+
 
 .container {
     display: flex;
     gap: 4rem;
+    width: 100%;
+    max-width: 94rem;
+    padding: 2rem;
 }
 
 .container .navigations {
@@ -106,6 +103,15 @@ input[name="radio"]:checked+label::before {
     height: auto;
     opacity: 1;
     z-index: 999;
+}
+
+@media(min-width: 768px) {
+    main {
+        padding-top: 10%;
+    }
+    .container {
+        margin-inline: auto;
+    }
 }
 
 @media(max-width: 767px) {
