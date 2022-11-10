@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
+}
+
+:root {
+    --primary-clr: #303f9f;
+    --secondary-clr: #fbc02d;
+    --ternory-clr: #3f51b5;
+    --white: #FFF;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+li {
+    list-style: none;
+}
+
+main {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-clr);
+    font-size: 2rem;
+    letter-spacing: 0.05rem;
+}
+
+
+.wrapper {
+    width: 100%;
+    max-width: 94rem;
+    padding: 2rem;
+}
+
+.container {
+    display: flex;
+    gap: 4rem;
+}
+
+.container .navigations {
+    width: 20%;
+    color: var(--primary-clr);
+}
+
+
+.navigations li+li {
+    margin-top: 1.6rem;
+}
+
+.navigations li label {
+    padding: 1rem 1rem 1rem 2.3rem;
+    position: relative;
+    cursor: pointer;
+    background-color: var(--ternory-clr);
+    display: block;
+}
+
+.navigations li label::before {
+    content: '';
+    width: 0.8rem;
+    height: 0.8rem;
+    background: var(--primary-clr);
+    display: block;
+    position: absolute;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0.7rem;
+    transition: all 0.5s;
+}
+
+input[name="radio"]:checked+label {
+    color: var(--secondary-clr);
+}
+
+input[name="radio"]:checked+label::before {
+    background: var(--secondary-clr);
+    left: 0;
+    height: 100%;
+    border-radius: 0;
+    width: 0.3rem;
+}
+
+
+.container .tab-content {
+    flex: 1;
+    color: var(--white);
+    isolation: isolate;
+}
+
+.tab {
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+.tab-1 {
+    height: auto;
+    opacity: 1;
+    z-index: 999;
+}
+
+@media(max-width: 767px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .container>ul {
+        width: 100% !important;
+    }
+
+    .navigations {
+        display: flex;
+        gap: 1rem;
+    }
+
+    .navigations>li {
+        flex: 1;
+        margin: 0 !important;
+    }
+}
