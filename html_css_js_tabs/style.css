@@ -12,6 +12,7 @@
     --secondary-clr: #fbc02d;
     --ternory-clr: #3f51b5;
     --white: #FFF;
+    --tab-border: 0.3rem;
 }
 
 html {
@@ -35,7 +36,7 @@ main {
 
 .container {
     display: flex;
-    gap: 4rem;
+
     width: 100%;
     max-width: 94rem;
     padding: 2rem;
@@ -59,13 +60,18 @@ main {
     display: block;
 }
 
-.navigations li label::before {
+.navigations li label::before,
+.navigations li label::after {
     content: '';
+    position: absolute;
+    display: block;
+}
+
+.navigations li label::before {
     width: 0.8rem;
     height: 0.8rem;
     background: var(--primary-clr);
-    display: block;
-    position: absolute;
+
     border-radius: 50%;
     top: 50%;
     transform: translateY(-50%);
@@ -75,6 +81,8 @@ main {
 
 input[name="radio"]:checked+label {
     color: var(--secondary-clr);
+    border-top: var(--tab-border) solid var(--secondary-clr);
+    border-bottom: var(--tab-border) solid var(--secondary-clr);
 }
 
 input[name="radio"]:checked+label::before {
@@ -82,7 +90,16 @@ input[name="radio"]:checked+label::before {
     left: 0;
     height: 100%;
     border-radius: 0;
-    width: 0.3rem;
+    width: var(--tab-border);
+}
+
+input[name="radio"]:checked+label::after {
+    top: 0;
+    right: calc(-1*var(--tab-border));
+    width: var(--tab-border);
+    height: 100%;
+    background: var(--ternory-clr);
+    z-index: 999;
 }
 
 
@@ -93,22 +110,21 @@ input[name="radio"]:checked+label::before {
 }
 
 .tab {
-    height: 0;
-    overflow: hidden;
-    opacity: 0;
+    display: none;
     transition: all 0.5s;
+    padding: 1rem;
 }
 
 .tab-1 {
-    height: auto;
-    opacity: 1;
-    z-index: 999;
+    display: block;
+    border: var(--tab-border) solid var(--secondary-clr);
 }
 
 @media(min-width: 768px) {
     main {
         padding-top: 10%;
     }
+
     .container {
         margin-inline: auto;
     }
@@ -131,5 +147,24 @@ input[name="radio"]:checked+label::before {
     .navigations>li {
         flex: 1;
         margin: 0 !important;
+    }
+
+    input[name="radio"]:checked+label::before {
+        height: 112%;
+        z-index: 9999;
+    }
+
+    input[name="radio"]:checked+label {
+        border-bottom: none;
+        border-right: var(--tab-border) solid var(--secondary-clr);
+    }
+
+    input[name="radio"]:checked+label::after {
+        top: unset;
+        left: 0;
+        bottom: calc(-1*var(--tab-border));
+        right: unset;
+        width: 100%;
+        height: var(--tab-border);
     }
 }

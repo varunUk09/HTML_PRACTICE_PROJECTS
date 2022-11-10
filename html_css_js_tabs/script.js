@@ -4,9 +4,9 @@ const tabs = document.querySelectorAll(".tab");
 function showTab(index) {
     tabs.forEach((tab, tabIndex) => {
         if (tabIndex === index) {
-            tab.style.cssText = `height:auto;opacity:1;z-index: 999;`;
+            tab.style.cssText = `display:block;border: 0.3rem solid var(--secondary-clr);`;
         } else {
-            tab.style.cssText = ` height:0;opacity:0;z-index:0;`;
+            tab.style.cssText = `display:none;border:none;`;
         }
     })
 }
