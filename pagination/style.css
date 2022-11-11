@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.7rem;
+    color: rgb(0 0 0 /30%);
+}
+
+html {
+    font-size: 62.5%;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    display: block;
+}
+
+:root {
+    --primary-clr: purple;
+    --secondary-clr: white;
+    --ternory-clr: black;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--primary-clr);
+    min-height: 100vh;
+    padding-inline: 1rem;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 90rem;
+    background: var(--secondary-clr);
+    padding: 1rem;
+    border-radius: .5rem;
+    box-shadow: 0 0.8rem 1rem rgb(0 0 0 / 30%);
+}
+
+.nav>a {
+    padding: 1.6rem 2.2rem;
+    border-radius: 0.5rem;
+    border: .1rem solid;
+    cursor: pointer;
+}
+
+.nav>a:hover {
+    background: var(--ternory-clr);
+    color: var(--secondary-clr);
+}
+
+.page-numbers {
+    display: flex;
+    flex: 1;
+    gap: .7rem;
+    justify-content: center;
+}
+
+@media(max-width: 991px) {
+    html {
+        font-size: 52.5%;
+    }
+}
+
+@media(max-width: 767px) {
+    html {
+        font-size: 52.5%;
+    }
+
+    .number:nth-last-child(-n + 4) {
+        display: none;
+    }
+}
+
+@media(max-width: 575px) {
+    .number:nth-last-child(-n + 7) {
+        display: none;
+    }
+}
