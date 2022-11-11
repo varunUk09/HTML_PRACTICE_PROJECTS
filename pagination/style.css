@@ -39,13 +39,14 @@ main {
 
 .container {
     display: flex;
-    justify-content: space-between;
+
     width: 100%;
-    max-width: 90rem;
+    max-width: fit-content;
     background: var(--secondary-clr);
     padding: 1rem;
     border-radius: .5rem;
     box-shadow: 0 0.8rem 1rem rgb(0 0 0 / 30%);
+    gap: 1.8rem;
 }
 
 .nav>a {
@@ -67,24 +68,14 @@ main {
     justify-content: center;
 }
 
-@media(max-width: 991px) {
+@media(max-width: 619px) {
     html {
-        font-size: 52.5%;
+        font-size: 42.5%;
     }
 }
 
-@media(max-width: 767px) {
+@media(max-width: 500px) {
     html {
-        font-size: 52.5%;
-    }
-
-    .number:nth-last-child(-n + 4) {
-        display: none;
-    }
-}
-
-@media(max-width: 575px) {
-    .number:nth-last-child(-n + 7) {
-        display: none;
+        font-size: 30.5%;
     }
 }
