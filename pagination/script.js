@@ -33,5 +33,5 @@ document.querySelectorAll(".page-numbers a").forEach((anchor, index) => {
     let page_number = jsonData[index].page_number;
     let file_name = jsonData[index].file_name;
     let query = `?page_number=${page_number}&file_name=${file_name}`;
-    anchor.href = window.location.pathname + 'pages/page.html' + query;
+    anchor.href = window.location.pathname + 'pages/index.html' + query;
 });
