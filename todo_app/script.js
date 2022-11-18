@@ -48,7 +48,7 @@ taskList.addEventListener("click", (e) => {
         disableBtn([e.target,e.target.nextElementSibling])
         
         // showing undo buttton
-        const undoBtn = document.querySelector(".task-undo");
+        const undoBtn = e.target.parentElement.querySelector(".task-undo");
         undoBtn.style.display = "block";
 
 
