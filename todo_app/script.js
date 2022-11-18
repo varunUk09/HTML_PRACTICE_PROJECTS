@@ -5,7 +5,7 @@ let taskId = 0;
 
 taskForm.addEventListener("submit", (e) => {
     e.preventDefault();
-    taskName.value != "" ? addTask() : alert("Please enter your task first!!!");)
+    taskName.value != "" ? addTask() : alert("Please enter your task first!!!");
 });
 
 function addTask() {
