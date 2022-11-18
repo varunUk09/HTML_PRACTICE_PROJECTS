@@ -1,0 +1,159 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    transition: all 0.5s;
+}
+
+* {
+    font-size: 1.6rem;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+li {
+    list-style: none;
+}
+
+input,
+button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+main {
+    min-height: 100vh;
+    background-color: mediumpurple;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 54rem;
+}
+
+/*todo form*/
+.todo-form {
+    display: flex;
+}
+
+.todo-form input[type="text"] {
+    flex: 1;
+    padding: 1rem;
+    text-align: center;
+}
+
+.todo-form input[type="submit"] {
+    width: 8rem;
+    background: blueviolet;
+    color: white;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+/*task list*/
+.tasks {
+    padding-block: 1rem;
+}
+
+.tasks li+li {
+    margin-top: 1.3rem;
+}
+
+.tasks li {
+    background: white;
+    padding: 0.8rem;
+}
+
+.tasks li>.task-name {
+    color: rgb(0 0 0 /75%);
+    letter-spacing: .1rem;
+    word-break: break-word;
+    line-height: 1.3;
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+
+.tasks li>.task-name::selection {
+    color: black;
+    background: yellow;
+}
+
+.tasks li>.task-name.completed {
+    text-decoration: line-through;
+    font-style: italic;
+}
+
+.tasks li>div {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.task-cta {
+    text-transform: capitalize;
+    font-size: 1.5rem;
+    padding: 0.4rem 1.5rem;
+    border-radius: 0.3rem;
+}
+
+.task-done {
+    color: rgb(0 128 0);
+    background: rgb(0 128 0 / 10%);
+}
+
+.task-done:hover {
+    color: white;
+    background: rgb(0 128 0 / 70%);
+}
+
+.task-edit {
+    color: rgb(128 0 128);
+    background: rgb(128 0 128 / 16%);
+}
+
+.task-edit:hover {
+    color: white;
+    background: purple;
+}
+
+.task-remove {
+    color: rgb(255 0 0);
+    background: rgb(255 0 0 / 10%);
+}
+
+.task-remove:hover {
+    color: white;
+    background: rgb(255 0 0 / 70%);
+}
+
+.task-undo {
+    color: white;
+    background: rgb(0 0 0 / 40%);
+    display: none;
+}
+
+.task-undo:hover {
+    background: black;
+}
+
+.cta-disabled {
+    color: rgb(0 0 0 /16%) !important;
+    background: rgb(0 0 0 /5%) !important;
+    cursor: not-allowed;
+}
+
+@media(max-width:530px) {
+    .container {
+        padding: 1rem;
+    }
+}
