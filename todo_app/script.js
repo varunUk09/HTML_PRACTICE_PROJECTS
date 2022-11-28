@@ -5,12 +5,7 @@ let taskId = 0;
 
 taskForm.addEventListener("submit", (e) => {
     e.preventDefault();
-    if (taskName.value != "") {
-        addTask();
-    } else {
-        alert("Please enter some task!!!");
-    }
-
+    taskName.value != "" ? addTask() : alert("Please enter your task first!!!");
 });
 
 function addTask() {
@@ -48,7 +43,7 @@ taskList.addEventListener("click", (e) => {
         disableBtn([e.target,e.target.nextElementSibling])
         
         // showing undo buttton
-        const undoBtn = document.querySelector(".task-undo");
+        const undoBtn = e.target.parentElement.querySelector(".task-undo");
         undoBtn.style.display = "block";
 
 
