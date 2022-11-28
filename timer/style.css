@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+    transition: all 0.5s;
+}
+
+li {
+    list-style: none;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: yellow;
+}
+
+.container {
+    --bg-color: rgb(0 0 0 /85%);
+    width: 100%;
+    max-width: 500px;
+    background: var(--bg-color);
+    padding: 10px;
+    color: white;
+    text-align: center;
+}
+
+button.stop-timer {
+    width: 20px;
+    height: 20px;
+    background: red;
+    border: none;
+    outline: none;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    cursor: pointer;
+    display: none;
+}
+
+.stop-timer.active {
+    display: initial;
+}
+
+.full-bleed {
+    box-shadow: 0 0 0 100vmax var(--bg-color);
+    clip-path: inset(0 -100vmax);
+}
+
+.timer-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.timer-form input {
+    border: none;
+    outline: none;
+    padding: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.timer-form input[type="submit"] {
+    background: purple;
+    color: white;
+    text-transform: capitalize;
+}
+
+.timer-form input[type="submit"].inactive {
+    opacity: 0.4;
+    pointer-events: none;
+}
+
+.info {
+    font-size: 14px;
+    padding-block: 10px;
+    text-align: justify;
+}
+
+.timer {
+    display: inline-flex;
+    background: black;
+    padding: 10px;
+    gap: 10px;
+
+}
+
+.timer li {
+    color: rgb(255 255 255 / 88%);
+}
+
+.timer li p {
+    font-size: 18px;
+    font-weight: 700;
+    color: white;
+}
+
+.timer li:nth-child(odd) {
+    width: 50px;
+}
+
+.timer li:nth-child(even) {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+}
