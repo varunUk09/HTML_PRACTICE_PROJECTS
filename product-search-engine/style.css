@@ -62,8 +62,8 @@ li {
 }
 
 .product__product-img {
-    width: 80px;
-    height: 80px;
+    min-width: 80px;
+    max-height: 80px;
     display: block;
     object-fit: contain;
 }
