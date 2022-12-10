@@ -64,9 +64,10 @@ li {
 
 .product__product-img {
     min-width: 80px;
-    max-height: 80px;
+    max-width: 80px;
     display: block;
     object-fit: contain;
+    height: 80px;
 }
 
 li.product__product {
