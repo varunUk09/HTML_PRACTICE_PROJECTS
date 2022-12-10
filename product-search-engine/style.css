@@ -12,8 +12,9 @@ html {
 main {
     height: 100vh;
     background: purple;
-    display: grid;
-    place-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 li {
