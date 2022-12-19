@@ -1,0 +1,71 @@
+*,*::before,*::after{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+/*=== Burger settings ===*/
+:root{
+  /*=== Burger bg color ===*/
+  --burger-color:black;
+  /*=== Burger lines color ===*/
+  --line-color:white;
+   /*=== Increase or Decrease size*/
+  --box-width:360;
+}
+
+main,.hamburger-container{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+main{
+  height:100vh;
+}
+
+.hamburger-container{
+  background:var(--burger-color);
+  width:calc(var(--box-width) * 1px);
+  height:calc(var(--box-width) * 1px);
+  position:relative;
+  cursor:pointer;
+
+}
+
+.line{
+  width:80%;
+  height:calc(var(--box-width)/18 * 1px);
+  background:var(--line-color);
+  position:absolute;
+  transition:all 1s;
+}
+
+.line-1{
+  top:20%;
+  transform-origin:top;
+  transform:translateY(-20%);
+}
+
+.hamburger-container.active .line-1{
+  top:50%;
+  transform:translateY(-50%);
+  rotate:45deg;
+}
+
+.line-3{
+  bottom:20%;
+  transform:translateY(20%);
+  transform-origin:bottom;
+  
+}
+
+.hamburger-container.active .line-3{
+  rotate:-45deg;
+  bottom:50%;
+  transform:translateY(50%);
+}
+
+.hamburger-container.active .line-2{
+  width:0%;
+}
