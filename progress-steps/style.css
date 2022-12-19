@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+*,*::before,*::after{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  transition:0.5s all;
+}
+
+main{
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.container{
+  width:95%;
+  max-width:500px;
+}
+
+.progress-container{
+  --progress-width:0;
+  display:flex;
+  justify-content:space-between;
+  margin-bottom:30px;
+  position:relative;
+}
+
+.progress-container::after,
+.progress-container::before{
+  content:'';
+  display:block;
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  height:3px;
+}
+
+.progress-container::after{
+  background:purple;
+  width:calc(var(--progress-width) * 100%);
+}
+
+
+.progress-container::before{
+  width:100%;
+  background:rgb(0 0 0 / 20%);
+}
+
+.circles{
+  width:30px;
+  height:30px;
+  border:2px solid purple;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  border-radius:50%;
+  font-weight:bold;
+  color:purple;
+  z-index:999;
+  background:white;
+}
+
+.circles.active{
+  background:purple;
+  color:white;
+}
+
+.steps-cta-container{
+  display:flex;
+  justify-content:center;
+  gap:20px;
+}
+
+.steps-cta-container > button{
+  width:100px;
+  border:none;
+  outline:none;
+  padding:10px;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+.steps-cta-container > button:not([disabled=true]):hover{
+  background:purple;
+  color:white;
+}
+
