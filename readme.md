@@ -7,7 +7,7 @@
 ### Feel free to contribute 
 
 | Project Title | Live Preview Link | Folder Link |
-| --- | --- |
+| --- | --- | --- |
 | Accordian | [Preview](https://varunuk09.github.io/HTML_PRACTICE_PROJECTS/accordian/) | [Folder](https://github.com/varunUk09/HTML_PRACTICE_PROJECTS/tree/master/Accordian) |
 | Blinking_text | [Preview](https://varunuk09.github.io/HTML_PRACTICE_PROJECTS/blinking_text/) | [Folder](https://github.com/varunUk09/HTML_PRACTICE_PROJECTS/tree/master/blinking_text) |
 | Custom_checkbox | [Preview](https://varunuk09.github.io/HTML_PRACTICE_PROJECTS/custom_checkbox/) | [Folder](https://github.com/varunUk09/HTML_PRACTICE_PROJECTS/tree/master/custom_checkbox) |
@@ -32,6 +32,6 @@
 | Todo_app | [Preview](https://varunuk09.github.io/HTML_PRACTICE_PROJECTS/todo_app/) | [Folder](https://github.com/varunUk09/HTML_PRACTICE_PROJECTS/tree/master/todo_app) |
 | Tooltip | [Preview](https://varunuk09.github.io/HTML_PRACTICE_PROJECTS/Tooltip/) | [Folder](https://github.com/varunUk09/HTML_PRACTICE_PROJECTS/tree/master/Tooltip) |
 | Tribute_page | [Preview](https://varunuk09.github.io/HTML_PRACTICE_PROJECTS/Tribute_page/) | [Folder](https://github.com/varunUk09/HTML_PRACTICE_PROJECTS/tree/master/Tribute_page) |
-| ... | ... |
+| ... | ... | ... |
 
 ### If any link broken please inform
