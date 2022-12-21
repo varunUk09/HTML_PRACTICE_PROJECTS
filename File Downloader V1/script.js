@@ -1,3 +1,11 @@
+const URL_FIELD = document.querySelector("input[type='url']")
+const DOWNLOAD_BTN = document.querySelector("input#submit");
+document.querySelector(".container form").addEventListener("submit", (e) => {
+    e.preventDefault();
+    DOWNLOAD_BTN.value = "DOWNLOADING FILE...";
+    fetchFile(URL_FIELD.value);
+});
+
 function fetchFile(url) {
   // validate the URL input
   if (!/^https?:\/\//i.test(url)) {
