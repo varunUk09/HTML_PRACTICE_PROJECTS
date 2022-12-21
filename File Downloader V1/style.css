@@ -24,23 +24,6 @@ main{
 }
 
 
-progress {
-  /* style the progress bar */
-  appearance: none;
-  width: 80%;
-  height: 20px;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  background-color: #eee;
-
-  /* style the progress value */
-  &::-webkit-progress-value {
-    appearance: none;
-    background-color: #4caf50;
-    border-radius: 10px;
-  }
-}
-
 .container{
 	width: 100%;
 	max-width: 54rem;
