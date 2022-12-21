@@ -6,8 +6,18 @@ function fetchFile(url) {
     return;
   }
 
+  // create an AbortController and AbortSignal to support cancelling the download
+  const controller = new AbortController();
+  const signal = controller.signal;
+
+  // create a progress bar element and append it to the document
+  const progressBar = document.createElement("progress");
+  progressBar.value = 0;
+  progressBar.max = 100;
+  document.body.insertAdjacentElement("beforeend", progressBar);
+
   // fetching file & returning response as blob
-  fetch(url)
+  fetch(url, { signal })
     .then((response) => {
       // get the file name and extension from the Content-Disposition header, or use a default file name
       const contentDisposition = response.headers.get("Content-Disposition");
