@@ -44,18 +44,17 @@ function fetchFile(url) {
       if (response.ok) {
         // update the progress bar as the download progresses
         response.body.getReader().read().then(function processResult(result) {
-          if (result.done) {
-            progressBar.remove();
-            return;
-          }
-          const value = result.value.length;
-          const total = parseInt(response.headers.get("Content-Length"), 10);
-          progressBar.value += value;
-          return response.body
-            .getReader()
-            .read()
-            .then(processResult);
-        });
+  if (result.done) {
+    progressBar.remove();
+    return;
+  }
+  const value = result.value.length;
+  const total = parseInt(response.headers.get("Content-Length"), 10);
+  progressBar.value += value;
+  progressBar.style.width = `${Math.round((progressBar.value / total) * 100)}%`;
+  return response.body.getReader().read().then(processResult);
+});
+
 
         return response.blob().then((file) => {
           // converting blob file to url
