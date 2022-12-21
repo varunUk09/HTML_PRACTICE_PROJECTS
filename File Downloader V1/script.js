@@ -32,21 +32,45 @@ function fetchFile(url) {
         fileName = "download.bin";
       }
 
-      return response.blob().then((file) => {
-        // converting blob file to url
-        const tempUrl = URL.createObjectURL(file);
-        const aTag = document.createElement("a");
-        aTag.href = tempUrl;
-        aTag.download = fileName; // file name
-        document.body.insertAdjacentElement("beforeend", aTag);
-        aTag.click();
-        aTag.remove();
-        URL.revokeObjectURL(tempUrl);
-        DOWNLOAD_BTN.value = "SUBMIT";
-      });
+      // check the response status
+      if (response.ok) {
+        // update the progress bar as the download progresses
+        response.body.getReader().read().then(function processResult(result) {
+          if (result.done) {
+            progressBar.remove();
+            return;
+          }
+          const value = result.value.length;
+          const total = parseInt(response.headers.get("Content-Length"), 10);
+          progressBar.value += value;
+          return response.body
+            .getReader()
+            .read()
+            .then(processResult);
+        });
+
+        return response.blob().then((file) => {
+          // converting blob file to url
+          const tempUrl = URL.createObjectURL(file);
+          const aTag = document.createElement("a");
+          aTag.href = tempUrl;
+          aTag.download = fileName; // file name
+          document.body.insertAdjacentElement("beforeend", aTag);
+          aTag.click();
+          aTag.remove();
+          URL.revokeObjectURL(tempUrl);
+          DOWNLOAD_BTN.value = "SUBMIT";
+        });
+      } else {
+        // handle non-200 status responses
+        throw new Error(response.statusText);
+      }
     })
     .catch((e) => {
+      // handle any errors that occurred during the download
       alert("Failed To Download Please Try Again!!!");
       DOWNLOAD_BTN.value = "SUBMIT";
+      progressBar.remove();
+      controller.abort();
     });
 }
