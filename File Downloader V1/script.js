@@ -7,54 +7,22 @@ document.querySelector(".container form").addEventListener("submit", (e) => {
 });
 
 function fetchFile(url) {
-  // validate the URL input
-  if (!/^https?:\/\//i.test(url)) {
-    alert("Invalid URL. Please enter a valid URL.");
-    DOWNLOAD_BTN.value = "SUBMIT";
-    return;
-  }
-
-  // create an AbortController and AbortSignal to support cancelling the download
-  const controller = new AbortController();
-  const signal = controller.signal;
-
-  // create a progress bar element and append it to the document
-  const progressBar = document.createElement("progress");
-  progressBar.value = 0;
-  progressBar.max = 100;
-  document.body.insertAdjacentElement("beforeend", progressBar);
-
-  // fetching file & returning response as blob
-  fetch(url, { signal })
-    .then((response) => {
-      // get the file name and extension from the Content-Disposition header, or use a default file name
-      const contentDisposition = response.headers.get("Content-Disposition");
-      let fileName = "";
-      if (contentDisposition) {
-        const fileNameMatch = contentDisposition.match(/filename="(.+)"/);
-        if (fileNameMatch) {
-          fileName = fileNameMatch[1];
+  try {
+    // fetching file & returning response as blob
+    fetch(url)
+      .then((response) => {
+        // get the file name and extension from the Content-Disposition header, or use a default file name
+        const contentDisposition = response.headers.get("Content-Disposition");
+        let fileName = "";
+        if (contentDisposition) {
+          const fileNameMatch = contentDisposition.match(/filename="(.+)"/);
+          if (fileNameMatch) {
+            fileName = fileNameMatch[1];
+          }
         }
-      }
-      if (!fileName) {
-        fileName = "download.bin";
-      }
-
-      // check the response status
-      if (response.ok) {
-        // update the progress bar as the download progresses
-        response.body.getReader().read().then(function processResult(result) {
-  if (result.done) {
-    progressBar.remove();
-    return;
-  }
-  const value = result.value.length;
-  const total = parseInt(response.headers.get("Content-Length"), 10);
-  progressBar.value += value;
-  progressBar.style.width = `${Math.round((progressBar.value / total) * 100)}%`;
-  return response.body.getReader().read().then(processResult);
-});
-
+        if (!fileName) {
+          fileName = "download.bin";
+        }
 
         return response.blob().then((file) => {
           // converting blob file to url
@@ -68,16 +36,22 @@ function fetchFile(url) {
           URL.revokeObjectURL(tempUrl);
           DOWNLOAD_BTN.value = "SUBMIT";
         });
-      } else {
-        // handle non-200 status responses
-        throw new Error(response.statusText);
-      }
-    })
-    .catch((e) => {
-      // handle any errors that occurred during the download
-      alert("Failed To Download Please Try Again!!!");
-      DOWNLOAD_BTN.value = "SUBMIT";
-      progressBar.remove();
-      controller.abort();
-    });
+      })
+      .catch((error) => {
+        throw error;
+      });
+  } catch (error) {
+    // handle specific errors here
+    if (error instanceof TypeError) {
+      // handle type errors here
+      alert("Invalid URL. Please enter a valid URL.");
+    } else if (error instanceof SyntaxError) {
+      // handle syntax errors here
+      alert("Invalid URL. Please enter a valid URL.");
+    } else {
+      // handle other errors here
+      alert("An error occurred. Please try again.");
+    }
+    DOWNLOAD_BTN.value = "SUBMIT";
+  }
 }
