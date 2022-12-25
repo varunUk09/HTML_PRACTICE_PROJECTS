@@ -1,6 +1,7 @@
 $(document).ready(function() {
     // slider js
     $('.slider').slick({
+        lazyLoad: 'ondemand',
         dots: true,
         infinite: false,
         speed: 400,
