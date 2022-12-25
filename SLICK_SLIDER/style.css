@@ -1,0 +1,67 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: inherit;
+}
+
+img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+main {
+    background: purple;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    padding-block: 20px;
+}
+
+.heading {
+    font-family: monospace;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    margin-bottom: 16px;
+}
+
+.container {
+    width: 100%;
+    max-width: 1000px;
+    padding-inline: 30px;
+}
+
+.slide-image {
+    width: 100%;
+    aspect-ratio: 1/1;
+}
+
+/*slick slider css reset*/
+.slick-next,
+.slick-prev {
+    z-index: 999;
+    height: 100%;
+    padding: 16px;
+    width: fit-content;
+}
+
+.slick-prev {
+    left: 0;
+}
+
+.slick-next{
+	right: 0;
+}
+
+.slick-dots li button:before{
+	font-size: 10px;
+}
+
+.slick-dots{
+	padding-block: 10px;
+	bottom: 0;
+}

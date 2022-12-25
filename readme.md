@@ -32,7 +32,8 @@
 | Todo_app | [Preview](https://varunuk09.github.io/HTML_PRACTICE_PROJECTS/todo_app/) | [Folder](https://github.com/varunUk09/HTML_PRACTICE_PROJECTS/tree/master/todo_app) |
 | Tooltip | [Preview](https://varunuk09.github.io/HTML_PRACTICE_PROJECTS/Tooltip/) | [Folder](https://github.com/varunUk09/HTML_PRACTICE_PROJECTS/tree/master/Tooltip) |
 | Tribute_page | [Preview](https://varunuk09.github.io/HTML_PRACTICE_PROJECTS/Tribute_page/) | [Folder](https://github.com/varunUk09/HTML_PRACTICE_PROJECTS/tree/master/Tribute_page) |
-| Project_name | [Preview](https://varunuk09.github.io/HTML_PRACTICE_PROJECTS/Project_Folder_Name/) | [Folder](https://github.com/varunUk09/HTML_PRACTICE_PROJECTS/tree/master/) |
+| SLICK_SLIDERS | [Preview](https://varunuk09.github.io/HTML_PRACTICE_PROJECTS/SLICK_SLIDER/) | [Folder](https://github.com/varunUk09/HTML_PRACTICE_PROJECTS/tree/master/SLICK_SLIDER) |
+| Project_name | [Preview](https://varunuk09.github.io/HTML_PRACTICE_PROJECTS/Project_Folder_Name/) | [Folder](https://github.com/varunUk09/HTML_PRACTICE_PROJECTS/tree/master/Project_Folder_Name) |
 | ... | ... | ... |
 
-### If any link broken please inform (@varunUk09)
+### If any link broken please inform ( @varunUk09 )
