@@ -4,7 +4,7 @@
 
 # All The Project (Html ,Css and js ) with live preview Link
 
-### Feel free to contribute 
+### Feel  free to contribute 
 
 | Project Title | Live Preview Link | Folder Link |
 | --- | --- | --- |
