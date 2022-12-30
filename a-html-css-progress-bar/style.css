@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:wght@700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  font-size:62.5%;
+}
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 1rem;
+  background: black;
+}
+.progress {
+  --progress:0;
+  /*200px*/
+/*   --progress-bar-height:20;  */
+  position: relative;
+  display: flex;
+  --progress-bar-width:500; /*500px*/
+/*   height:clamp(1rem,calc(var(--progress-bar-height) * 0.1rem),10rem); */
+  border: 3px solid white;
+  border-radius: 8px;
+  font-size:clamp(1rem,calc(10vw),2.6rem);
+  font-family: 'Courier Prime', monospace;
+  overflow: hidden;
+  width:100%;
+  max-width:calc(var(--progress-bar-width) * .1rem);
+  font-weight:bold;
+}
+
+.back,.front{
+  padding:.5rem;
+}
+
+.back {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background:blue;
+  color:white;
+}
+
+.front {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background:black;
+  color:yellow;
+  clip-path: inset(0 0 0 calc(var(--progress) * 1%));
+  -webkit-clip-path: inset(0 0 0 calc(var(--progress) * 1%));
+  transition: clip-path 0.5s linear;
+}

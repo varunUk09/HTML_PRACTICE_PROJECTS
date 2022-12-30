@@ -4,7 +4,7 @@
 
 # All The Project (Html ,Css and js ) with live preview Link
 
-### Feel free to contribute 
+### Feel  free to contribute 
 
 | Project Title | Live Preview Link | Folder Link |
 | --- | --- | --- |
@@ -33,6 +33,7 @@
 | Tooltip | [Preview](https://varunuk09.github.io/HTML_PRACTICE_PROJECTS/Tooltip/) | [Folder](https://github.com/varunUk09/HTML_PRACTICE_PROJECTS/tree/master/Tooltip) |
 | Tribute_page | [Preview](https://varunuk09.github.io/HTML_PRACTICE_PROJECTS/Tribute_page/) | [Folder](https://github.com/varunUk09/HTML_PRACTICE_PROJECTS/tree/master/Tribute_page) |
 | SLICK_SLIDERS | [Preview](https://varunuk09.github.io/HTML_PRACTICE_PROJECTS/SLICK_SLIDER/) | [Folder](https://github.com/varunUk09/HTML_PRACTICE_PROJECTS/tree/master/SLICK_SLIDER) |
+| A Html CSS Progress Bar | [Preview](https://varunuk09.github.io/HTML_PRACTICE_PROJECTS/a-html-css-progress-bar/) | [Folder](https://github.com/varunUk09/HTML_PRACTICE_PROJECTS/tree/master/a-html-css-progress-bar) |
 | Project_name | [Preview](https://varunuk09.github.io/HTML_PRACTICE_PROJECTS/Project_Folder_Name/) | [Folder](https://github.com/varunUk09/HTML_PRACTICE_PROJECTS/tree/master/Project_Folder_Name) |
 | ... | ... | ... |
 
