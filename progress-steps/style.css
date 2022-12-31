@@ -12,6 +12,7 @@ main{
   display:flex;
   justify-content:center;
   align-items:center;
+  background:black;
 }
 
 .container{
@@ -38,7 +39,7 @@ main{
 }
 
 .progress-container::after{
-  background:purple;
+  background:yellow;
   width:calc(var(--progress-width) * 100%);
 }
 
@@ -51,20 +52,21 @@ main{
 .circles{
   width:30px;
   height:30px;
-  border:2px solid purple;
+  border:2px solid white;
   display:flex;
   justify-content:center;
   align-items:center;
   border-radius:50%;
   font-weight:bold;
-  color:purple;
+  color:white;
   z-index:999;
-  background:white;
+  background:black;
+  cursor:pointer;
 }
 
 .circles.active{
-  background:purple;
-  color:white;
+  background:yellow;
+  color:black;
 }
 
 .steps-cta-container{
@@ -79,11 +81,11 @@ main{
   outline:none;
   padding:10px;
   font-weight:bold;
-  cursor:pointer;
 }
 
-.steps-cta-container > button:not([disabled=true]):hover{
-  background:purple;
-  color:white;
+.steps-cta-container > button:not(:disabled):hover{
+  background:yellow;
+  color:black;
+  cursor:pointer;
 }
 
