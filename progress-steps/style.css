@@ -46,7 +46,7 @@ main{
 
 .progress-container::before{
   width:100%;
-  background:rgb(0 0 0 / 20%);
+  background:white;
 }
 
 .circles{
