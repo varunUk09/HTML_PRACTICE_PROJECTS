@@ -36,7 +36,7 @@ let data = {
     },
     "Scroll to an elementThis code scrolls the window to a specific position, with a smooth animation.": {
         "tag": "Scroll to an element",
-        "code": "window.scrollTo({\n    top: value,\n    behaviour: \"smooth\",\n    left: value\n});",
+        "code": "window.scrollTo({\n    top: value,\n    behavior: \"smooth\",\n    left: value\n});",
         "desc": "This code scrolls the window to a specific position, with a smooth animation."
     },
     "Get HTML from a URLThis code sends an HTTP request to a server using the XMLHttpRequest object, retrieves the response data as a string, creates a new HTML \"div\" element and sets its innerHTML to the response data. Then, it selects an element inside the \"div\" element using a CSS selector but does not do anything further with it.": {
@@ -201,5 +201,13 @@ function addCopyToClick() {
             },3000);
             document.body.removeChild(el);
         });
+    });
+}
+
+function goToTop(){
+    window.scrollTo({
+        top:0,
+        behavior:"smooth",
+        left:0
     });
 }
