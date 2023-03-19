@@ -196,18 +196,18 @@ function addCopyToClick() {
             el.select();
             document.execCommand('copy');
             this.style.cssText = `--code-text:"copied"`;
-            setTimeout(()=>{
+            setTimeout(() => {
                 this.style.cssText = `--code-text:"copy"`;
-            },3000);
+            }, 3000);
             document.body.removeChild(el);
         });
     });
 }
 
-function goToTop(){
-    window.scrollTo({
-        top:0,
-        behavior:"smooth",
-        left:0
+document.querySelector("span#goToTop").addEventListener("click",goToTop);
+
+function goToTop() {
+    document.querySelector(".codes-list-item:nth-child(1)").scrollIntoView({
+        behavior: "smooth",
     });
 }

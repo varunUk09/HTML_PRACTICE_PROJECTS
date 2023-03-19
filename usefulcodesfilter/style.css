@@ -7,12 +7,35 @@ font-family: 'Space Mono', monospace; */
     padding:0;
     box-sizing: border-box;
 }
+
+html {
+    scroll-behavior: smooth;
+}
+
 .container {
     padding: 0 10px;
     display: flex;
     flex-direction: column;
     height: 100vh;
     background: rgb( 0 0 0 / 5%);
+    position: relative;
+}
+
+span#goToTop {
+    position: fixed;
+    bottom: 14px;
+    z-index: 999 !important;
+    right: 50px;
+    background: rgb(128 0 128 / 81%);
+    color: white;
+    font-family: 'Maven Pro', sans-serif;
+    font-weight: 600;
+    display: block;
+    padding: 4px 15px;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 .search-group {
