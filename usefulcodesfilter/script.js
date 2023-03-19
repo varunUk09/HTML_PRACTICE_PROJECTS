@@ -161,6 +161,8 @@ for (const key in data) {
     }
 }
 
+addCopyToClick();
+
 document.querySelector(".search-group").addEventListener("submit", (e) => {
     e.preventDefault();
 });
@@ -182,5 +184,22 @@ function filter(query) {
                 desc.parentElement.classList.remove("filter-match");
             }
         }
+    });
+}
+
+function addCopyToClick() {
+    document.querySelectorAll(".code").forEach(code => {
+        code.addEventListener("click", function () {
+            const el = document.createElement('textarea');
+            el.value = this.innerText;
+            document.body.appendChild(el);
+            el.select();
+            document.execCommand('copy');
+            this.style.cssText = `--code-text:"copied"`;
+            setTimeout(()=>{
+                this.style.cssText = `--code-text:"copy"`;
+            },3000);
+            document.body.removeChild(el);
+        });
     });
 }

@@ -133,6 +133,31 @@ li.codes-list-item:not(:first-child) {
     border-radius: 3px;
     white-space: pre-line;
     word-wrap: break-word;
+    position: relative;
+    --code-text:'copy';
+}
+
+.code::before {
+    content:var(--code-text);
+    background: rgb(255 0 0 / 60%);
+    color: white;
+    padding: 4px 7px 7px;
+    align-items: center;
+    position: absolute;
+    line-height: 1;
+    border-radius: 5px;
+    display: flex;
+    font-size: 9px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    bottom: 5px;
+    right: 5px;
+    cursor:pointer;
+    transition:all 0.3s;
+}
+
+.code:hover::before{
+    background-color:red !important;
 }
 
 li.codes-list-item.hide-it{
