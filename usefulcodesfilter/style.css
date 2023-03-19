@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;600&family=Space+Mono&display=swap');
+/* font-family: 'Maven Pro', sans-serif;
+font-family: 'Space Mono', monospace; */
+
+*,*::before,*::after{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+.container {
+    padding: 0 10px;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background: rgb( 0 0 0 / 5%);
+}
+
+.search-group {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 700px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+input.search-box {
+    flex: 1;
+    border: 2px solid rgb(0 0 0 /20%);
+    outline: none;
+    font-size: 16px;
+    line-height: 1.5;
+    padding: 10px;
+    border-right: none;
+    transition: all 0.5s;
+    color: rgb(0 0 0 /64%);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    transition: all 0.2s;
+}
+
+input.search-box:focus {
+    border-color: rgb(0 0 0 /60%);
+}
+
+.search-icon {
+    width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: purple;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.search-icon:hover {
+    background-color: rgb(128 0 128 / 64%);
+}
+
+.search-icon svg {
+    width: 26px;
+}
+
+.search-icon svg path{
+    fill: white;
+}
+
+ul.codes-list {
+    flex-grow: 1;
+    overflow-y: auto;
+}
+
+li.codes-list-item {
+    list-style: none;
+    background: #f9f9f9;
+    padding: 10px;
+    transition: all 0.3s;
+}
+
+h2.tagline {
+    font-size: 27px;
+    border-bottom: 1px solid rgb(0 0 0 /18%);
+    text-transform: capitalize !important;
+    font-family: 'Maven Pro', sans-serif;
+    font-weight: 600;
+    margin-bottom: 22px;
+    padding-bottom: 10px;
+}
+
+li.codes-list-item:not(:first-child) {
+    margin-top: 11px;
+}
+
+.desc {
+    font-size: 16px;
+    color: rgb(0 0 0 /68%);
+    font-family: 'Maven Pro', sans-serif;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 10px;
+    position: relative;
+    margin-top: 40px;
+    line-height: 1.4;
+    white-space: pre-line;
+}
+
+.desc::before {
+    content: 'Description';
+    background: green;
+    color: white;
+    padding: 5px;
+    border-radius: 7px;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+    position: absolute;
+    top: 0 !important;
+    left: 0;
+    transform: translateY(-120%);
+    line-height: normal !important;
+}
+
+.code {
+    display: block;
+    font-family: 'Space Mono', monospace;
+    font-size: 14px;
+    color: #00a67d;
+    background-color: #000;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    white-space: pre-line;
+    word-wrap: break-word;
+}
+
+li.codes-list-item.hide-it{
+    height: 0;
+    overflow: hidden;
+    margin:0;
+    padding:0;
+}
+
+li.codes-list-item.filter-match{
+    background-color: rgb(255 255 0/ 20%);
+}
