@@ -1,4 +1,6 @@
-import { data }  from './data.js';
+import {
+    data
+} from './data.js';
 let id = 0;
 for (const key in data) {
     if (data.hasOwnProperty(key)) {
@@ -26,19 +28,30 @@ document.querySelector(".search-box").addEventListener("input", function () {
 });
 
 function filter(query) {
+    let words = query.trim().toUpperCase().split(" ");
     document.querySelectorAll(".desc").forEach(desc => {
-        if (desc.getAttribute("data-tag").toUpperCase().indexOf(query.toUpperCase()) == -1) {
-            desc.parentElement.classList.add("hide-it");
-        } else {
+        let tag = desc.getAttribute("data-tag").toUpperCase();
+        let show = false;
+        words.forEach(word => {
+            if (tag.indexOf(word) !== -1) {
+                show = true;
+            }
+        });
+        if (show) {
             desc.parentElement.classList.remove("hide-it");
             if (query.trim() !== "") {
                 desc.parentElement.classList.add("filter-match");
             } else {
                 desc.parentElement.classList.remove("filter-match");
             }
+        } else {
+            desc.parentElement.classList.add("hide-it");
         }
     });
 }
+
+
+
 
 function addCopyToClick() {
     document.querySelectorAll(".code").forEach(code => {
@@ -57,7 +70,7 @@ function addCopyToClick() {
     });
 }
 
-document.querySelector("span#goToTop").addEventListener("click",goToTop);
+document.querySelector("span#goToTop").addEventListener("click", goToTop);
 
 function goToTop() {
     document.querySelector(".codes-list-item:nth-child(1)").scrollIntoView({
